@@ -1,16 +1,24 @@
 import React from "react";
-import { View, Image, StyleSheet, TouchableOpacity, Text } from "react-native";
+import {
+  View,
+  Image,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  Text,
+} from "react-native";
 
-const SingleStory = () => {
+const SingleStory = ({ navigation }) => {
   return (
     <View style={styles.storyset}>
       <View style={styles.story}>
-        <Image
-          style={styles.image}
-          source={{
-            uri: "https://images.pexels.com/photos/7784586/pexels-photo-7784586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-          }}
-        />
+        <TouchableWithoutFeedback onPress={() => navigation.navigate("Story")}>
+          <Image
+            style={styles.image}
+            source={{
+              uri: "https://images.pexels.com/photos/7784586/pexels-photo-7784586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            }}
+          />
+        </TouchableWithoutFeedback>
       </View>
       <Text style={styles.title}>Tom Wilson</Text>
     </View>

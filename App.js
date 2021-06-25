@@ -6,11 +6,15 @@ import StackNav from "./components/StackNav";
 
 export default function App() {
   return (
-    <>
-      <Navigate>
-        <StackNav />
-        <StatusBar backgroundColor="#FF005C" translucent={false} />
-      </Navigate>
-    </>
+    <Navigate>
+      <StackNav />
+      <StatusBar backgroundColor="#FF005C" translucent={false} />
+    </Navigate>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: StatusBar.currentHeight || 0,
+  },
+});

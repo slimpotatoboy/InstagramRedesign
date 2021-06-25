@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView, Text } from "react-native";
 import SingleStory from "./SingleStory";
 import { Entypo } from "@expo/vector-icons";
 
-const Story = () => {
+const Story = ({ navigation }) => {
   return (
     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
       <View style={styles.container}>
@@ -13,12 +13,12 @@ const Story = () => {
           </View>
           <Text style={styles.title}>Me</Text>
         </View>
-        <SingleStory />
-        <SingleStory />
-        <SingleStory />
-        <SingleStory />
-        <SingleStory />
-        <SingleStory />
+        <SingleStory navigation={navigation} />
+        <SingleStory navigation={navigation} />
+        <SingleStory navigation={navigation} />
+        <SingleStory navigation={navigation} />
+        <SingleStory navigation={navigation} />
+        <SingleStory navigation={navigation} />
       </View>
     </ScrollView>
   );
